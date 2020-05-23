@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEBPAGE</title>
+</head>
+<body>
+{% block content %}
+<center><h1>UPLOAD RESUME</h1>
+    <p>Click on the "Choose File" button to upload a file:</p></center>
+<center><form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" id="file" name="document">
+    <button onclick="return fileValidation()">Submit</button>
+    <script>
+
+        function fileValidation(){
+            var fileInput = document.getElementById('file');
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.doc|\.docx)$/i;
+            if(!allowedExtensions.exec(filePath))
+            {
+            alert('Upload file only with extensions .doc or .docx');
+            fileInput.value = '';
+            return false;
+            }
+        }
+</script>
+</form></center>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>resume</title>
+</head>
+<body>
+{% block content %}
+
+<table border="1" align="center" width="800" bgcolor="pink">
+    <caption>VERIFY YOUR DATA</caption>
+    <tr>
+        <th>FIRST NAME</th>
+        <td><input type="text" name="fname" id="fname" placeholder="{{ fname }}"/></td>
+    </tr>
+    <tr>
+        <th>LAST NAME</th>
+        <td><input type="text" name="lname" id="lname" placeholder="{{ lname }}" ></td>
+    </tr>
+    <tr>
+        <th>MAIL ID</th>
+        <td><input type="email" name="mail" id="mail" placeholder="{{ mail }}"></td>
+    </tr>
+    <tr>
+        <th>MOBILE NUMBER</th>
+        <td><input type="number" name="number" id="number" placeholder="{{ number }}"></td>
+    </tr>
+    <tr>
+        <th>ADDRESS</th>
+        <td><textarea rows="8" cols="20"<input type="text" name="text" id="text" placeholder="{{ address }}"></textarea></td>
+    </tr>
+    <tr>
+        <th>CITY</th>
+        <td><input type="text" name="city" id="city" placeholder="{{ city }}"></td>
+    </tr>
+    <tr>
+        <th>PIN CODE</th>
+        <td><input type="number" name="pin" id="pin" placeholder="{{ pin }}"></td>
+    </tr>
+    <tr>
+        <th>STATE</th>
+        <td><input type="text" name="state" id="state" placeholder="{{ state }}"></td>
+    </tr>
+    <tr>
+        <th>COUNTRY</th>
+        <td><input type="text" name="country" id="country" placeholder="{{ country }}"></td>
+    </tr>
+    <tr>
+        <th>SKILLS</th>
+        <td><input type="text" name="skill" id="skill" placeholder="{{ skill }}"></td>
+    </tr>
+    <tr>
+        <th>WORK EXPERIENCE</th>
+        <td><input type="text" name="exp" id="exp" placeholder="{{ exp }}"></td>
+    </tr>
+    <tr>
+        <th>EDUCATION</th>
+        <td><input type="text" name="edu" id="edu" placeholder="{{ edu }}"></td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><input type="submit" value="Submit">
+        <input type="reset" value="Reset Data"/></td>
+    </tr>
+</table>
+
+{% endblock %}
+</body>
+</html>
